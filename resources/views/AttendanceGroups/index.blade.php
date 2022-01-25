@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <h1>Index</h1>
-        @if (count($attendancegroup) == 0)
+        @if (count($attendancegroups) == 0)
         <p>There is no attendancegroup</p>
         @endif
 

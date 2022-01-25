@@ -27,7 +27,9 @@ class AttendanceGroupController extends Controller
      */
     public function create()
     {
-        //
+        $select_values = AttendanceGroup::all();
+
+        return view('attendancegroups.create', ['select_values' => $select_values]);
     }
 
     /**
@@ -40,8 +42,9 @@ class AttendanceGroupController extends Controller
     {
         $attendancegroup = new AttendanceGroup();
         $attendancegroup->name = $request->attendancegroup_name;
-        $attendancegroup->type = $request->attendancegroup_type;
         $attendancegroup->description = $request->attendancegroup_description;
+        $attendancegroup->difficulty = $request->attendancegroup_difficulty;
+        $attendancegroup->schoolnew_id = $request->attendancegroup_schoolnew_id;
         $attendancegroup->save();
 
         return redirect()->route('attendancegroup.index');
