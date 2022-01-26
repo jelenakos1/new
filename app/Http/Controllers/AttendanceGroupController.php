@@ -58,7 +58,7 @@ class AttendanceGroupController extends Controller
      */
     public function show(AttendanceGroup $attendanceGroup)
     {
-        //
+    
     }
 
     /**
