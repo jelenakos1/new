@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Clients</title>
+    <title>Students</title>
 </head>
 
 <body>
     <div class="container">
         <h1>Index</h1>
-        @if (count($student) == 0)
+        @if (count($students) == 0)
         <p>There is no students</p>
         @endif
 
@@ -38,10 +38,10 @@
                 <td>{{$student->group_id}}</td>
                 <td>{{$student->image_url}}</td>
                 <td class="row justify-content-center">
-                    <a class="btn btn-primary col-3 mr-3" href="{{route('students.edit', [$student])}}">Edit</a>
-                    <a class=" ml-3 btn btn-secondary col-3" href="{{route('students.show', [$student])}}">Show</a>
+                    <a class="btn btn-primary col-3 mr-3" href="{{route('student.edit', [$student])}}">Edit</a>
+                    <a class=" ml-3 btn btn-secondary col-3" href="{{route('student.show', [$student])}}">Show</a>
 
-                    <form class="col-3" method="post" action="{{route('students.destroy', [$student])}}">
+                    <form class="col-3" method="post" action="{{route('student.destroy', [$student])}}">
                         @csrf
                         <button class="btn btn-danger " type="submit">Delete</button>
                     </form>
