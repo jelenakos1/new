@@ -13,34 +13,33 @@
 <body>
     <div class="container">
 
-        <h1>Create</h1>
+        <h1>Create </h1>
 
-        <form method="POST" action="{{ route('client.store') }}">
+        <form method="POST" action="{{ route('student.store') }}">
 
-            <input class="form-control" type="text" value="Test" name="client_name" placeholder="Client Name" />
-            <input class="form-control" type="text" value="Test" name="client_surname" placeholder="Client Surname" />
-            <input class="form-control" type="text" value="Test" name="client_username" placeholder="Client username" />
+            <input class="form-control" type="text" value="Test" name="student_name" placeholder="Student Name" />
+            <input class="form-control" type="text" value="Test" name="student_surname" placeholder="Student Surname" />
+            <input class="form-control" type="text" value="Test" name="student_group_id" placeholder="Student group_id" />
+            <input class="form-control" type="text" value="Test" name="student_image_url" placeholder="Student image_url" />
 
 
-            <select name="client_company_id" class="form-control">
+            <select name="student_group_id" class="form-control">
                 {{-- @for ($i=1; $i<=250; $i++)
                         <option value="{{$i}}">{{$i}}</option>
                 @endfor --}}
 
-              {{-- @foreach ($clients as $company)
-                <option value="{{$company->id}}">{{$company->name}}</option>
+              {{-- @foreach ($students as $student)
+                <option value="{{$student->id}}">{{$student->name}}</option>
                 @endforeach --}}
 
 
             </select>
 
-            <input class="form-control" type='text' name="client_name" value="test" />
-            <input class="form-control" type='text' name="client_surname" value="test" />
-            <input class="form-control" type='text' name="client_username" value="test" />
+
             @csrf
 
             <button class="btn btn-primary" type='submit'>Add</button>
-            <a class="btn btn-secondary" href="{{route('client.index')}}">Back</a>
+            <a class="btn btn-secondary" href="{{route('student.index')}}">Back</a>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

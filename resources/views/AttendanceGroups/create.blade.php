@@ -27,6 +27,9 @@
               @for ($i=1; $i<=250; $i++)
                         <option value="{{$i}}">{{$i}}</option>
                 @endfor
+                {{-- @foreach ($attendancegroups as $attendancegroup)
+                <option value="{{$attendancegroup->id}}">{{$attendancegroup->name}}</option>
+                @endforeach --}}
 
             </select>
 
