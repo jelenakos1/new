@@ -18,7 +18,7 @@
         @endif
 
 
-        <a class="btn btn-primary" href="{{route('student.create')}}">Create new student date</a>
+        <a class="btn btn-primary" href="{{route('students.create')}}">Create new student date</a>
         <table class="table table-striped">
 
             <tr>
@@ -38,10 +38,10 @@
                 <td>{{$student->group_id}}</td>
                 <td>{{$student->image_url}}</td>
                 <td class="row justify-content-center">
-                    <a class="btn btn-primary col-3 mr-3" href="{{route('student.edit', [$student])}}">Edit</a>
-                    <a class=" ml-3 btn btn-secondary col-3" href="{{route('student.show', [$student])}}">Show</a>
+                    <a class="btn btn-primary col-3 mr-3" href="{{route('students.edit', [$student])}}">Edit</a>
+                    <a class=" ml-3 btn btn-secondary col-3" href="{{route('students.show', [$student])}}">Show</a>
 
-                    <form class="col-3" method="post" action="{{route('student.destroy', [$student])}}">
+                    <form class="col-3" method="post" action="{{route('students.destroy', [$student])}}">
                         @csrf
                         <button class="btn btn-danger " type="submit">Delete</button>
                     </form>

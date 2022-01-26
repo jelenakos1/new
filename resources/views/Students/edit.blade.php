@@ -15,33 +15,34 @@
 
         <h1>Edit</h1>
 
-        <form method="POST" action="{{route('client.update', [$client])}}">
+        <form method="POST" action="{{route('student.update', [$student])}}">
 
-            <input class="form-control" type='text' name="client_name" value='{{$client->name}}' />
-            <input class="form-control" type='text' name="client_surname" value='{{$client->surname}}' />
-            <input class="form-control" type='number' name="client_username" value='{{$client->username}}' />
-        
-            <select name="client_company_id" class="form-control">
+            <input class="form-control" type='text' name="student_name" value='{{$student->name}}' />
+            <input class="form-control" type='text' name="student_surname" value='{{$student->surname}}' />
+            <input class="form-control" type='number' name="student_group_id" value='{{$student->group_id}}' />
+            <input class="form-control" type='text' name="student_image_url" value='{{$student->image_url}}' />
+
+            <select name="student_group_id" class="form-control">
                 {{-- @for ($i=1; $i<=250; $i++)
                     <option value="{{$i}}">{{$i}}</option>
                 @endfor --}}
                 
-                @foreach ($select_values as $company)
-                    @if ($company->id == $client->company_id)
-                        <option value="{{$company->id}}" selected>{{$company->name}}</option>
+                @foreach ($select_values as $student)
+                    @if ($student->id == $student->group_id)
+                        <option value="{{$student->id}}" selected>{{$student->name}}</option>
                     @else
-                        <option value="{{$company->id}}">{{$company->name}}</option>
+                        <option value="{{$student->id}}">{{$student->name}}</option>
                     @endif
                 @endforeach
 
 
         </select>
 
-            <input class="form-control" type='text' name="client_image_url" value="{{$client->image_url}}" placeholder="Client URL"/>
+            <input class="form-control" type='text' name="student_image_url" value="{{$student->image_url}}" placeholder="Student URL"/>
             @csrf
 
             <button class="btn btn-primary" type='submit'>Edit</button>
-            <a class="btn btn-secondary" href="{{route('client.index')}}">Back</a>
+            <a class="btn btn-secondary" href="{{route('students.index')}}">Back</a>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
