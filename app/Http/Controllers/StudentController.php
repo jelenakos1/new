@@ -15,7 +15,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $students = Student::all();
+        return view('students.index', ['students'=>$students]);
     }
 
     /**
@@ -25,7 +26,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        $select_values = Student::all();
+        return view('student.create', ['select_values' => $select_values]);
     }
 
     /**
@@ -36,7 +38,8 @@ class StudentController extends Controller
      */
     public function store(StoreStudentRequest $request)
     {
-        //
+        $select_values = Student::all();
+        return view('student.store', ['select_values' => $select_values]);
     }
 
     /**
@@ -47,7 +50,8 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-        //
+        $select_values = Student::all();
+        return view('student.show', ['select_values' => $select_values]);
     }
 
     /**
@@ -58,7 +62,8 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        $select_values = Student::all();
+        return view('student.edit', ['select_values' => $select_values]);
     }
 
     /**
@@ -70,7 +75,8 @@ class StudentController extends Controller
      */
     public function update(UpdateStudentRequest $request, Student $student)
     {
-        //
+        $select_values = Student::all();
+        return view('student.update', ['select_values' => $select_values]);
     }
 
     /**
@@ -81,6 +87,7 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        $select_values = Student::all();
+        return view('student.destroy', ['select_values' => $select_values]);
     }
 }
