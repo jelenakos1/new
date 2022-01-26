@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Schoolnew;
 use App\Http\Requests\StoreSchoolnewRequest;
 use App\Http\Requests\UpdateSchoolnewRequest;
+use Illuminate\Http\Request;
 
 class SchoolnewController extends Controller
 {

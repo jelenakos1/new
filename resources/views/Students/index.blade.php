@@ -13,37 +13,35 @@
 <body>
     <div class="container">
         <h1>Index</h1>
-        @if (count($clients) == 0)
-        <p>There is no clients</p>
+        @if (count($student) == 0)
+        <p>There is no students</p>
         @endif
 
 
-        <a class="btn btn-primary" href="{{route('client.create')}}">Create new client</a>
+        <a class="btn btn-primary" href="{{route('student.create')}}">Create new student date</a>
         <table class="table table-striped">
 
             <tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Surname</th>
-                <th>Username</th>
-                <th>Company ID</th>
+                <th>Group ID</th>
                 <th>Image Url</th>
                 <th>Actions</th>
             </tr>
 
-            @foreach ($clients as $client)
+            @foreach ($students as $student)
             <tr>
-                <td>{{$client->id}}</td>
-                <td>{{$client->name}}</td>
-                <td>{{$client->surname}}</td>
-                <td>{{$client->username}}</td>
-                <td>{{$client->company_id}}</td>
-                <td>{{$client->image_url}}</td>
+                <td>{{$student->id}}</td>
+                <td>{{$student->name}}</td>
+                <td>{{$student->surname}}</td>
+                <td>{{$student->group_id}}</td>
+                <td>{{$student->image_url}}</td>
                 <td class="row justify-content-center">
-                    <a class="btn btn-primary col-3 mr-3" href="{{route('client.edit', [$client])}}">Edit</a>
-                    <a class=" ml-3 btn btn-secondary col-3" href="{{route('client.show', [$client])}}">Show</a>
+                    <a class="btn btn-primary col-3 mr-3" href="{{route('student.edit', [$student])}}">Edit</a>
+                    <a class=" ml-3 btn btn-secondary col-3" href="{{route('student.show', [$student])}}">Show</a>
 
-                    <form class="col-3" method="post" action="{{route('client.destroy', [$client])}}">
+                    <form class="col-3" method="post" action="{{route('student.destroy', [$student])}}">
                         @csrf
                         <button class="btn btn-danger " type="submit">Delete</button>
                     </form>
