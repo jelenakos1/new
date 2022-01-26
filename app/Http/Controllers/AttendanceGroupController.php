@@ -50,7 +50,7 @@ class AttendanceGroupController extends Controller
         return redirect()->route('AttendanceGroups.index');
     }
 
-    /**
+    /**vngnhmfhcmgh
      * Display the specified resource.
      *
      * @param  \App\Models\AttendanceGroup  $attendanceGroup
