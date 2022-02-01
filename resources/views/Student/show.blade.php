@@ -16,7 +16,14 @@
         <p>Id : {{$student->id}}</p>
         <p>Name : {{$student->name}}</p>
         <p>Surname : {{$student->surname}}</p>
-        <p>Group Id : {{$student->group_id}}</p>
+        <p>Group :
+            @foreach($attendanceGroups as $attendanceGroup)
+            @if($student->group_id == AttendanceGroup->id)
+            {{$attendanceGroup->name}}
+            @endif
+            @endforeach
+
+        </p>
         <p>Image Url : {{$student->image_url}}</p>
 
         <form method="post" action="{{route('student.destroy', [$student])}}">

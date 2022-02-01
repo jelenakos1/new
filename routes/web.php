@@ -27,7 +27,7 @@ Route::prefix('AttendanceGroups')->group(function() {
     Route::get('edit/{AttendanceGroup}','App\HTTp\Controllers\AttendanceGroupController@edit')->name('attendancegroup.edit');
     Route::post('update/{AttendanceGroup}','App\HTTp\Controllers\AttendanceGroupController@update')->name('attendancegroup.update');
     //index
-  Route::get('','App\HTTp\Controllers\AttendancegroupController@index')->name('Attendancegroup.index');
+  Route::get('','App\HTTp\Controllers\AttendancegroupController@index')->name('attendancegroup.index');
   //delete
   Route::post('destroy/{AttendanceGroup}','App\HTTp\Controllers\AttendanceGroupController@destroy')->name('attendancegroup.destroy');
   //show

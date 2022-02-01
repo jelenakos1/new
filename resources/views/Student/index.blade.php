@@ -26,6 +26,7 @@
                 <th>Name</th>
                 <th>Surname</th>
                 <th>Group ID</th>
+                <th>Group level(difficulty)</th>
                 <th>Image Url</th>
                 <th>Actions</th>
             </tr>
@@ -35,7 +36,8 @@
                 <td>{{$student->id}}</td>
                 <td>{{$student->name}}</td>
                 <td>{{$student->surname}}</td>
-                <td>{{$student->group_id}}</td>
+                <td>{{$student->studentAttendanceGroup->name}}</td>
+                <td>{{$student->studentAttendanceGroup->difficulty}}</td>
                 <td>{{$student->image_url}}</td>
                 <td class="row justify-content-center">
                     <a class="btn btn-primary col-3 mr-3" href="{{route('student.edit', [$student])}}">Edit</a>

@@ -28,9 +28,9 @@
                         <option value="{{$i}}">{{$i}}</option>
                 @endfor --}}
 
-              {{-- @foreach ($students as $student)
-                <option value="{{$student->id}}">{{$student->name}}</option>
-                @endforeach --}}
+              @foreach ($select_values as $AttendanceGroup)
+                <option value="{{$AttendanceGroup->id}}">{{$AttendanceGroup->name}}</option>
+                @endforeach
 
 
             </select>

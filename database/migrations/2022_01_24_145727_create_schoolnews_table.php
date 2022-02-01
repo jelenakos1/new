@@ -17,8 +17,10 @@ class CreateSchoolnewsTable extends Migration
             $table->id();
             $table->string('name');
             $table->longText('description');
-            $table->place('string');
-            $table->bigInteger('phone');
+            $table->string('place');
+            $table->string('phone');
+
+            $table->foreigh('group_id')->references('id')->on('attendancegroup');
             $table->timestamps();
         });
     }

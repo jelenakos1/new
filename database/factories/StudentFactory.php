@@ -14,7 +14,10 @@ class StudentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=> $this->faker->firstName(),
+            'surname'=> $this->faker->lastName(),
+            'group_id'=> rand(1,10),// bus 10 grupiu
+            'image_url'=>$this->faker->imageUrl() ,
         ];
     }
 }

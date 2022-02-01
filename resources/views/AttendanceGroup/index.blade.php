@@ -26,6 +26,7 @@
                 <th>Name</th>
                 <th>Description</th>
                 <th>Difficulty</th>
+                <th>Student count</th>
                 <th>School name</th>
                 <th>Actions</th>
             </tr>
@@ -36,7 +37,8 @@
                 <td>{{$attendancegroup->name}}</td>
                 <td>{{$attendancegroup->description}}</td>
                 <td>{{$attendancegroup->difficulty}}</td>
-                <td>{{$attendancegroup->schoolnew_id}}</td>
+                <td>{{$attendancegroup->attendanceGroupSchool->name}}</td>
+                <td>{{count($attendancegroup->attendanceGroupStudents->name)}}</td>
          
                
                 <td class="row justify-content-center">

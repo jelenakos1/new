@@ -17,7 +17,7 @@ class AttendanceGroupController extends Controller
     public function index()
     {
         $attendancegroups = AttendanceGroup::all();
-        return view('AttendanceGroups.index',['AttendanceGroups' => $attendancegroups]);
+        return view('AttendanceGroup.index',['attendancegroups' => $attendancegroups]);
     }
 
     /**
@@ -58,7 +58,7 @@ class AttendanceGroupController extends Controller
      */
     public function show(AttendanceGroup $attendanceGroup)
     {
-    
+    //
     }
 
     /**
@@ -69,7 +69,7 @@ class AttendanceGroupController extends Controller
      */
     public function edit(AttendanceGroup $attendanceGroup)
     {
-        //
+        return view('AttendanceGroups.edit', ['attendanceGroup'=>$attendanceGroup]);
     }
 
     /**
